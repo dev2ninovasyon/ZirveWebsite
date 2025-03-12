@@ -1,0 +1,42 @@
+
+/*------------------------------------*\
+    #BOXED LAYOUT
+\*------------------------------------*/
+.body-boxed {
+	background: url(../images/background/pattern.png)
+}
+
+.body-boxed  .header-fixed .affix{
+	box-shadow: none;
+		
+}
+@media only screen and (min-width : 1200px) {
+
+.body-boxed .wrapper {
+	width: 1170px;
+	margin: auto;
+	-moz-box-shadow:  0 3px 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow:   0 3px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.body-boxed .wrapper .container {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+}
+
+@media only screen and (max-width : 1200px) {
+
+.body-boxed .wrapper {
+	width: auto;
+	margin: auto;
+	overflow-x: hidden;
+}
+}
+
+.body-boxed .header-fixed .affix {background-color:transparent}
+.body-boxed .header-fixed .affix .container{background-color:@color-white}
+.body-boxed .col-content {
+    padding: 90px;
+}

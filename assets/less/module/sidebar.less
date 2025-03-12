@@ -1,0 +1,238 @@
+/*------------------------------------*\
+	#Widgets
+\*------------------------------------*/
+
+.sidebar {
+	border-radius: 6px;
+	background-color: @color-white;
+	padding: 30px;
+}
+
+.widget {
+	margin-bottom: 50px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.widget:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+/* Widget */
+
+.widget .widget--title {
+	position: relative;
+}
+
+.widget .widget--title h5 {
+	color: @color-heading;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1;
+	text-transform: capitalize;
+	margin-bottom: 40px;
+}
+
+/* Category Widget */
+.widget-categories{
+	padding-bottom: 30px;
+}
+.widget-categories ul{
+	margin-top: -10px;
+	margin-bottom: 0
+}
+.widget-categories ul li a {
+	color: #bdbdbd;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 33px;
+}
+
+.widget-categories ul li a:hover {
+	color: @color-theme;
+}
+
+.widget-categories ul li a i {
+	margin-right: 11px;
+	color: #bdbdbd
+}
+.widget-categories ul li a:hover i {
+	color: @color-theme;
+}
+/* Tags Widget */
+.widget-tags{
+	padding-bottom: 32px;
+}
+.widget-tags ul {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+.widget-tags ul li {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.widget-tags a {
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1;
+	color: #363636;
+	margin-right:6px;
+	margin-bottom: 8px;
+	text-transform: capitalize;
+	padding: 10px 12px;
+}
+
+.widget-tags a:hover {
+	color: @color-theme;
+	border-color:@color-theme;
+}
+/* Recent Widegt */
+.widget-recent-posts .entry {
+	position: relative;
+	margin-bottom: 30px;
+	min-height: 50px;
+}
+
+.widget-recent-posts .entry:last-of-type {
+	margin-bottom: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.widget-recent-posts img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+.widget-recent-posts .entry .entry-desc {
+	position: relative;
+	margin-left: 90px;
+}
+
+.widget-recent-posts .entry .entry-title {
+	margin-bottom: 5px;
+}
+
+.widget-recent-posts .entry .entry-title a {
+	color: @color-heading;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	text-transform: capitalize;
+}
+
+.widget-recent-posts .entry .entry-title a:hover {
+	color: @color-theme
+}
+
+.widget-recent-posts .entry .entry-desc .entry-meta,
+.widget-recent-posts .entry .entry-desc .entry-meta a {
+	font-family: @font-heading;
+	font-size: 10px;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 20px;
+	font-style: italic;
+	color:#aaaaaa;
+}
+.widget-recent-posts .entry .entry-desc .entry-meta span:first-of-type{
+	margin-right: 10px;
+}
+/* Search Widget */
+.widget-search{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.widget-search .form-search {
+	border:none;
+	border-radius: 22px;
+background-color: #f5f5f5;
+}
+.widget-search .input-group {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 0 12px 0 0;
+}
+.widget-search .form-search .form-control {
+	border: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #bdbdbd;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 45px;
+	height: 45px;
+	text-transform: capitalize;
+	background-color: transparent;
+}
+/* Placeholder */
+
+.widget-search .form-search .form-control::-webkit-input-placeholder {
+	color: #bdbdbd;
+}
+
+.widget-search .form-search .form-control:-moz-placeholder {
+	color: #bdbdbd;
+}
+
+.widget-search .form-search .form-control::-moz-placeholder {
+	color: #bdbdbd;
+}
+
+.widget-search .form-search .form-control::-ms-input-placeholder {
+	color:#bdbdbd;
+}
+.widget-search .form-search .btn {
+	background-color: transparent;
+	color:#bdbdbd;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	width: 35px;
+	height: 45px;
+	line-height: 29px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 0;
+	padding: 0;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) and (max-width :767px) {
+	.sidebar {
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+
+	.widget {
+		margin-bottom: 30px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+	.widget-recent .entry .entry-desc {
+		margin-left: 70px;
+	}
+
+	.sidebar {
+		margin-bottom: 20px;
+		padding: 20px;
+	}
+}
