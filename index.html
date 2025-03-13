@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yapım Aşamasında</title>
+    <title>Yapım Aşamasında | Eskişehir Zirve</title>
     <style>
-        body, html {
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
             height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+            color: #fff;
         }
+
         .container {
             text-align: center;
-            background-color: white;
             padding: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             font-size: 3em;
-            color: #333;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 600;
         }
+
         p {
             font-size: 1.2em;
-            color: #666;
-        }
-        .container img {
-            width: 100px;
             margin-bottom: 20px;
+            color: #f1f1f1;
         }
-        .container .countdown {
-            font-size: 1.5em;
+
+        .countdown {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #ffeb3b;
+        }
+
+        .email-form {
             margin-top: 20px;
-            color: #ff9900;
+            display: flex;
+            justify-content: center;
+        }
+
+        .email-form input[type="email"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 250px;
+            font-size: 1em;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        .email-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ffeb3b;
+            color: #0072ff;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .email-form button:hover {
+            background-color: #ffcc00;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <img src="https://via.placeholder.com/100" alt="Yapım Aşamasında">
-        <h1>Çok Yakında!</h1>
-        <p>Web sitemiz şu anda yapım aşamasında. Lütfen daha sonra tekrar ziyaret edin!</p>
-        <div class="countdown" id="countdown"></div>
+        <h1>Yakında Geliyoruz!</h1>
+        <p>Web sitemiz yapım aşamasında, en kısa zamanda sizlerle buluşacağız. Lütfen beklemede kalın!</p>
+        
+    
+
+        <footer>
+            <p>&copy; 2025 <a href="https://eskisehirzirve.com.tr">Eskişehir Zirve</a>. Tüm Hakları Saklıdır.</p>
+        </footer>
     </div>
 
     <script>
-        // İsteğe bağlı: Geri sayım başlat
+        // Geri Sayım
         const launchDate = new Date('2025-06-01T00:00:00').getTime();
         const countdown = document.getElementById('countdown');
 
@@ -72,6 +134,7 @@
             }
         }, 1000);
     </script>
-    
+
 </body>
+
 </html>
