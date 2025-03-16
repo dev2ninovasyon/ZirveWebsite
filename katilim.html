@@ -70,31 +70,46 @@
 						<a href="#">
 							<i class="fa fa-phone" aria-hidden="true"></i> 05423299136
 						</a>
-					</li>
+					</li><!--/li-->
 					<li>
 						<a href="#">
 							<i class="fa fa-envelope" aria-hidden="true"></i>infoeskisehirzirve@gmail.com
 						</a>
-					</li>
-				</ul>
-			</div>
+					</li><!--/li-->
+					<li>
+						<a href="#">
+							<i class="fa fa-envelope" aria-hidden="true"></i>kultur@yoretur.com.tr
+						</a>
+					</li><!--/li-->
+				</ul><!--/ul-->
+			</div><!--/.header-left -->
 			<div class="header-right pull-right">
 				<ul>
+				
 					<li>
 						<div class="social-icon">
 							<ul>
 							  <li><a href="https://www.instagram.com/eskisehirmfvzirve" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							  <li><a href="https://www.linkedin.com/in/zirve2025" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							  <li><a href="mailto:infoeskisehirzirve@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>	
-	</section>
+			  <li><a href="https://www.linkedin.com/in/zirve2025" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			  <li><a href="mailto:infoeskisehirzirve@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+							</ul><!--/.ul -->
+						</div><!--/.social-icon -->
+					</li><!--/li -->
+				</ul><!--/ul -->
+			</div><!--/.header-right -->
+		</div><!--/.container -->	
+
+	</section><!--/.header-->	
 	<!--header end-->
-		
+	<style>
+		.navbar-brand img {
+		  max-height: 130px; /* Logonun maksimum yüksekliği */
+		  width: auto;
+		  height: auto;
+		  /* Responsive olması için: */
+		  max-width: 100%;
+		}
+	  </style>
 	<!--menu start-->
 	<section id="menu">
 		<div class="container">
@@ -108,7 +123,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="index.html">
-							<img src="assets/images/logo1.png" alt="logo">
+							<img src="assets/images/logo2.png" alt="logo">
 						</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -161,8 +176,8 @@
 									</div>
 									<div class="we-do-comment">
 										<p>
-											2.000 TL + KDV <br>
-											(2 gün katılım, Coffee Break, öğle yemeği, katılım belgesi, çanta vb)
+											2.000 TL + %20 KDV(2400 TL) <br>
+											(2 gün katılım, Coffee Break, öğle yemekleri, katılım belgesi, çanta vb)
 										</p>
 									</div>
 								</div>
@@ -186,7 +201,7 @@
 											(Halk Bankası)<br>
 											TR67 0001 2009 3480 0010 2611 19<br>
 											Veysel ALTINTAŞ – 05423299136<br>
-											(Ödeme dekont ve vergi bilgilerinin email ile atılması gerekmektedir.)
+											(Ödeme dekontu ve vergi bilgilerinin kultur@yoretur.com.tr e-posta adresine gönderilmesi gerekmektedir.)
 										</p>
 									</div>
 								</div>
@@ -219,7 +234,16 @@
 		</div>
 	</section>
 	<!--service end-->
-
+		<!--menu end-->
+		<style>
+			.navbar-brand img {
+			  max-height: 130px; /* Logonun maksimum yüksekliği */
+			  width: auto;
+			  height: auto;
+			  /* Responsive olması için: */
+			  max-width: 100%;
+			}
+		  </style>
 	<!--hm-footer start-->
 	<section class="hm-footer">
 		<div class="container">
@@ -229,7 +253,7 @@
 						<div class="hm-foot-title">
 							<div class="logo">
 								<a href="index.html">
-									<img src="assets/images/logo1.png" alt="logo" />
+									<img src="assets/images/logo2.png" alt="logo" />
 								</a>
 							</div>
 						</div>
@@ -270,13 +294,7 @@
 	<!--hm-footer end-->
   
 	<!-- Ek CSS -->
-	<style>
-		/* Logoyu küçültmek için */
-		.logo img {
-		  max-height: 80px;
-		  width: auto;
-		}
-	</style>
+
   
 	<!-- footer-copyright start -->
 	<footer class="footer-copyright">
@@ -312,3 +330,18 @@
 </body>
 
 </html>
+<style>
+	.navbar-brand img.small-logo {
+	max-height: 80px; /* Kaydırıldığında logo küçültülmüş yüksekliği */
+  }
+  </style>
+  <script>
+	$(window).on("scroll", function() {
+	  if ($(window).scrollTop() > 50) {
+		$(".navbar-brand img").addClass("small-logo");
+	  } else {
+		$(".navbar-brand img").removeClass("small-logo");
+	  }
+	});
+  </script>
+  

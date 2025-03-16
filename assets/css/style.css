@@ -346,23 +346,24 @@ html,body{
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+	background: rgba(0, 0, 0, 0.5); /* Siyah yarı saydam arka plan */
+    border-radius: 5px;
 }
 .single-slide-item h2 {
-	color:#fff;
+	color:#b4ff00;
 	font-size:48px;
 	font-weight:500;
-	line-height: 1.28;
+	line-height: 1.28;	
 	margin-bottom: 27px;
-	font-family: 'Playfair Display', serif;
-	text-transform: capitalize;
+	text-shadow: 3px 3px 8px rgba(0, 0, 0, 1); /* Güçlü gölge efekti */
 }
 .single-slide-item p {
-	color:#fefefe;
+	color:#b4ff00;
 	font-size:24px;
 	max-width:805px;
-	font-family: 'Lato', sans-serif;
     line-height: 1.5;
 	margin-bottom:51px;
+	text-shadow: 3px 3px 8px rgba(0, 0, 0, 1); /* Güçlü gölge efekti */
 }
 .single-slide-item button.slide-btn,
 .single-slide-item  button:active .slide-btn ,
@@ -374,8 +375,6 @@ html,body{
     border: 1px solid #f5f5fb;
 	font-size:16px;
 	font-weight:600;
-	text-transform: uppercase;
-	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	margin-right: 36px;
 	margin-bottom: 30px;
