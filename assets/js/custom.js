@@ -16,6 +16,7 @@ $(document).ready(function(){
 3. Counter
 4. owl carousel
 5. vedio player
+6. animation support
 ======================================*/
 
     // 1. Scroll To Top 
@@ -141,7 +142,7 @@ $(document).ready(function(){
 			
 			type:'video'
 		
-		});
+		});	
 
 	// 6. animation support
 
@@ -156,28 +157,6 @@ $(document).ready(function(){
             $(".single-slide-item-content h2, .single-slide-item-content p").addClass("animated fadeInUp").css({'opacity':'0'});
             $(".single-slide-item-content button").addClass("animated fadeInLeft").css({'opacity':'0'});
 
-        });
-
-    
-    // 6. Smooth Scroll spy
-        
-        // $('.header-area').sticky({
-        //    topSpacing:0
-        // });
-        
-        //=============
-
-        $('li.smooth-menu a').bind("click", function(event) {
-            event.preventDefault();
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - -1
-            }, 1200,'easeInOutExpo');
-        });
-        
-        $('body').scrollspy({
-            target:'.navbar-collapse',
-            offset:0
         });
 		
 });	
