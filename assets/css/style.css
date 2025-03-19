@@ -1709,8 +1709,12 @@ a:active.learn-btn{
 --------------------------------------*/
 .footer-copyright {
 	background:#1a1a2a;
-	padding: 30px 0 35px;
+	bottom: 0;            /* Ekranın en altına yerleştirir */
+	left: 0;  
+	padding: 20px 0 25px;
     text-align: center;
+	width: 100%;          /* Ekranın tamamını kaplar */
+  z-index: 999;         /* Üstte görünmesini sağlar (ihtiyaca göre) */
 }
 .foot-copyright{
 	color:#8b8b8b;
