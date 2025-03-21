@@ -341,8 +341,8 @@ html,body{
 }
 /* .single-slide-item */
 .single-slide-item {
-    padding-top: 184px;
-    padding-bottom:294px;
+    padding-top: 192px;
+    padding-bottom:311px ;
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
