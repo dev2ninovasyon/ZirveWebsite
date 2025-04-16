@@ -393,4 +393,26 @@
 	  }
 	});
   </script>
-  
+  <script>
+    // Sayfa yüklendiğinde mobil kontrolü yapar ve mobilse PDF embed altına link ekler
+    document.addEventListener('DOMContentLoaded', function() {
+      // Kullanıcı ajanı ile mobil tarayıcı kontrolü
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Sayfadaki tüm <embed> elemanlarını seçiyoruz
+        var embeds = document.querySelectorAll('section#pdfs embed');
+        embeds.forEach(function(embed) {
+          var src = embed.getAttribute('src');  // PDF dosyasının yolunu alır
+          // Link oluşturulur
+          var link = document.createElement('a');
+          link.href = src;
+          link.target = "_blank"; // Link yeni sekmede açılır
+          link.innerText = "PDF'i yeni sekmede görüntüle veya indir";
+          // Basit stil ayarları (isteğe bağlı)
+          link.style.display = "block";
+          link.style.marginTop = "10px";
+          // Link, ilgili PDF embed'inin hemen altına eklenir
+          embed.parentNode.insertAdjacentElement('afterend', link);
+        });
+      }
+    });
+  </script>
