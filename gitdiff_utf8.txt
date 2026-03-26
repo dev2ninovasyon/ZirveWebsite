@@ -1,0 +1,2032 @@
+﻿diff --git a/assets/css/style.css b/assets/css/style.css
+index c91479f..35c4379 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -1,4 +1,4 @@
+-´╗┐/*==================================
++/*==================================
+ * Author        : "ThemeSine"
+ * Template Name : Zombiz
+ * Version       : 1.0
+@@ -7,8 +7,8 @@
+ /*==================================
+ 
+ font-family: 'Playfair Display', serif;
+-font-family: 'Poppins', sans-serif;
+-font-family: 'Lato', sans-serif;
++font-family: 'Inter', sans-serif;
++font-family: 'Inter', sans-serif;
+ 
+ ==================================== */
+ 
+@@ -55,7 +55,7 @@ body {
+ 	max-width: 1920px;
+ 	margin: 0 auto;
+ 	overflow-x: hidden;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.6;
+ 	color: #44454f;
+ }
+@@ -110,16 +110,32 @@ textarea {
+ }
+ 
+ 
+-html {
++html, body {
+ 	height: 100%;
++	margin: 0;
+ }
+ 
+ body {
+-	min-height: 100vh !important;
+ 	display: flex !important;
+ 	flex-direction: column !important;
++	min-height: 100vh !important;
++	background: #fff;
++	max-width: 100%;
++	margin: 0;
++	overflow-x: hidden;
++	font-family: 'Inter', sans-serif;
++	line-height: 1.6;
++	color: #333;
+ 	position: relative;
+-	z-index: 2;
++}
++
++.footer-copyright {
++	margin-top: auto;
++	flex-shrink: 0;
++	background: #101D42;
++	padding: 30px 0;
++	color: #fff;
++	text-align: center;
+ }
+ 
+ [placeholder]:focus::-webkit-input-placeholder {
+@@ -148,39 +164,38 @@ body {
+ }
+ 
+ .header li a {
+-	color: #888;
++	color: #4A4A4A;
+ 	outline: 0;
+ }
+ 
+ /* header-left  */
+ .header-left li {
+ 	display: inline-block;
+-	margin-right: 50px;
+-	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	margin-right: 30px;
++	font-size: 14px;
++	font-family: 'Inter', sans-serif;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+ 	-ms-transition: .5s;
+ 	-o-transition: .5s;
+ 	transition: .5s;
+-
+ }
+ 
+ .header-left li i {
+ 	margin-right: 7px;
+-	color: #888;
++	color: #4A4A4A;
+ }
+ 
+ .header-left li :hover {
+-	color: #7370d8;
++	color: #C5A967;
+ }
+ 
+ /* header-left  */
+ 
+ /* header-right */
+ .header-right {
+-	color: #888;
+-	font-family: 'Poppins', sans-serif;
++	color: #4A4A4A;
++	font-family: 'Inter', sans-serif;
+ 
+ }
+ 
+@@ -190,7 +205,7 @@ body {
+ 
+ .header-right li a {
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	padding-bottom: 7px;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -201,7 +216,7 @@ body {
+ }
+ 
+ .header-right li a:hover {
+-	color: #7370d8;
++	color: #1A237E;
+ }
+ 
+ .reg a {
+@@ -233,30 +248,57 @@ body {
+ .modal-title {
+ 	font-size: 30px;
+ 	font-weight: 500;
+-	color: #eb1b33;
++	color: #1A237E;
+ }
+ 
+ .lg-frm button,
+ .sm-frm button {
+ 	margin-top: 25px;
+ 	background: transparent;
+-	border-color: #eb1b33;
+-	color: #eb1b33;
++	border-color: #1A237E;
++	color: #1A237E;
+ }
+ 
+ /*-------------------------------------
+ 		3. Menu
+ --------------------------------------*/
+ #menu {
+-	z-index: 999;
++	z-index: 1000;
++	background: #1A237E;
++	width: 100%;
++}
++
++.menubar {
++	display: flex;
++	align-items: center;
++	justify-content: space-between;
++	height: 100px;
++	transition: all 0.4s ease;
++}
++
++.sticky .menubar {
++    height: 80px;
+ }
+ 
+ /* navbar-brand */
+-.navbar-brand,
+-.navbar-brand:hover,
+-.navbar-brand:focus {
+-	margin-top: 8%;
++.navbar-header {
++	display: flex;
++	align-items: center;
++	flex-shrink: 0;
++}
++
++.navbar-brand {
+ 	padding: 0;
++	margin-right: 20px;
++	display: flex;
++	align-items: center;
++	height: auto;
++}
++
++.navbar-brand img {
++	max-height: 90px !important;
++	width: auto;
++	transition: all 0.5s ease;
+ }
+ 
+ /* navbar-brand */
+@@ -265,26 +307,32 @@ body {
+ .wrapper-sticky {
+ 	position: relative;
+ 	display: inline-block;
+-	background: rgba(115, 112, 216, 1);
++	background: rgba(26, 35, 126, 1);
+ }
+ 
+ /* sticky */
+ .sticky {
+-	background: rgba(115, 112, 216, 1);
+-	padding: 10px 0px 0px;
++	background: #ffffff;
++	padding: 0;
+ 	height: 80px;
+-	color: #fff;
++	color: #1A237E;
++	box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+ }
+ 
+ .sticky .navbar-brand {
+-	margin-top: 20px;
++	margin-top: 0;
++	height: 80px;
++}
++
++.sticky .navbar-brand img {
++	max-height: 65px !important;
+ }
+ 
+ .sticky .navbar-default .navbar-nav li a,
+ .sticky .navbar-default .navbar-nav li a:active,
+ .sticky .navbar-default .navbar-nav li a:focus,
+ .sticky .navbar-default .navbar-nav li a:hover {
+-	color: #fff;
++	color: #1A237E;
+ 	margin: 0px 0px;
+ }
+ 
+@@ -307,28 +355,33 @@ body {
+ }
+ 
+ .navbar-default .navbar-nav li a {
+-	font-size: 16px;
++	font-size: 13px;
++	font-weight: 600;
+ 	color: #fff;
+-	font-family: 'Lato', sans-serif;
+-	margin-top: 18px;
+-	padding-left: 27px;
+-	-webkit-transition: .5s;
+-	-moz-transition: .5s;
+-	-ms-transition: .5s;
+-	-o-transition: .5s;
+-	transition: .5s;
++	font-family: 'Inter', sans-serif;
++	padding: 10px 12px !important;
++	text-transform: uppercase;
++	letter-spacing: 0.5px;
++	transition: all 0.3s ease;
++	line-height: 100px;
++}
++
++.sticky .navbar-default .navbar-nav li a {
++	color: #1A237E;
++	line-height: 60px;
++}
++
++.navbar-default .navbar-nav li a:hover,
++.navbar-default .navbar-nav li.active a {
++    color: #C5A967 !important;
+ }
+ 
+ .navbar-default.navbar-nav li a:active,
+ .navbar-default.navbar-nav li a:focus,
+ .navbar-default .navbar-nav li a:hover {
+-	color: #fff;
++	color: #C5A967 !important;
+ 	outline: 0;
+ 	font-weight: 700;
+-	margin-top: 18px;
+-	padding-bottom: 25px;
+-	padding-left: 27px;
+-
+ }
+ 
+ .navbar-default .navbar-nav>.active>a,
+@@ -338,10 +391,10 @@ body {
+ 	background: transparent;
+ 	color: #fff;
+ 	font-weight: 700;
+-	font-family: 'Lato', sans-serif;
+-	margin-top: 18px;
+-	padding-bottom: 25px;
+-	padding-left: 27px;
++	font-family: 'Inter', sans-serif;
++	margin-top: 0;
++	padding-bottom: 0;
++	padding-left: 12px;
+ }
+ 
+ /* navbar-default */
+@@ -458,7 +511,7 @@ body {
+ 	display: inline-block;
+ 	background: #f5f5fb;
+ 	padding: 17px 50px;
+-	color: #5549af;
++	color: #C5A967;
+ 	border: 1px solid #f5f5fb;
+ 	font-size: 16px;
+ 	font-weight: 600;
+@@ -533,8 +586,8 @@ body {
+ 	width: 12px;
+ 	height: 12px;
+ 	margin: 12px 10px 0 0;
+-	background-color: #f7b405;
+-	border: 1px solid #f7b405;
++	background-color: #C5A967;
++	border: 1px solid #C5A967;
+ }
+ 
+ /* .carousel-indicators */
+@@ -552,7 +605,7 @@ body {
+ 	color: #fff;
+ 	font-size: 22px;
+ 	font-weight: 700;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	border-radius: 50%;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -563,7 +616,7 @@ body {
+ 
+ .carousel-control:hover {
+ 	background: #fff;
+-	color: #6967d1;
++	color: #1A237E;
+ 	font-size: 22px;
+ }
+ 
+@@ -614,21 +667,34 @@ body {
+ 
+ /* section-header */
+ .section-header h2 {
+-	color: #44454f;
+-	font-size: 36px;
++	color: #1A237E;
++	font-size: 42px;
+ 	font-family: 'Playfair Display', serif;
+ 	font-weight: 700;
+-	margin-bottom: 20px;
++	margin-bottom: 25px;
++	position: relative;
++	display: inline-block;
++}
++
++.section-header h2:after {
++	content: '';
++	position: absolute;
++	bottom: -10px;
++	left: 50%;
++	transform: translateX(-50%);
++	width: 60px;
++	height: 3px;
++	background: #C5A967;
+ }
+ 
+ .section-header h2 span {
+-	color: #7370d8;
++	color: #C5A967;
+ }
+ 
+ .section-header p {
+ 	color: #666;
+ 	font-size: 18px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	max-width: 1000px;
+ 	margin: 0 auto;
+ 	margin-top: 20px;
+@@ -648,9 +714,11 @@ body {
+ }
+ 
+ .single-we-do-box {
+-	box-shadow: 0 0 5px rgba(35, 37, 41, .1);
++	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+ 	overflow-x: hidden;
+ 	margin-top: 15px;
++	border-radius: 12px;
++	border: 1px solid #f0f0f0;
+ 	opacity: 1;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -700,9 +768,9 @@ body {
+ }
+ 
+ .we-do-comment p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	max-width: 306px;
+ 	margin: 0 auto;
+ }
+@@ -712,7 +780,8 @@ body {
+ 
+ /*we-do-description*/
+ .single-we-do-box:hover {
+-	box-shadow: 0 5px 20px rgba(112, 134, 230, .2);
++	box-shadow: 0 15px 40px rgba(26, 35, 126, 0.15);
++	transform: translateY(-5px);
+ 	opacity: 1;
+ }
+ 
+@@ -746,7 +815,7 @@ body {
+ .about-us p {
+ 	color: #555;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.8;
+ 	max-width: 100%;
+ 	margin-top: 20px;
+@@ -766,7 +835,7 @@ body {
+ 	content: " ";
+ 	top: 20px;
+ 	left: -20px;
+-	border: 3px solid #7370d8;
++	border: 3px solid #C5A967;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: -1;
+@@ -817,7 +886,7 @@ body {
+ .service-txt p {
+ 	color: #756c6a;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.67;
+ }
+ 
+@@ -825,9 +894,9 @@ a.service-btn,
+ a:active.service-btn,
+ a:hover.service-btn,
+ a:focus.service-btn {
+-	color: #7370d8;
++	color: #1A237E;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ 	margin-top: 12px;
+ 	margin-bottom: 15px;
+@@ -836,7 +905,7 @@ a:focus.service-btn {
+ /*.service-txt*/
+ 
+ .service-single:hover {
+-	box-shadow: 0 5px 20px rgba(112, 134, 230, .2);
++	box-shadow: 0 5px 20px rgba(26, 35, 126, 0.2);
+ 	opacity: 1;
+ }
+ 
+@@ -854,7 +923,7 @@ a:focus.service-btn {
+ .statistics:before {
+ 	position: absolute;
+ 	content: '';
+-	background: rgba(115, 112, 216, .8);
++	background: rgba(26, 35, 126, .8);
+ 	height: 100%;
+ 	width: 100%;
+ 	top: 0;
+@@ -876,14 +945,14 @@ a:focus.service-btn {
+ .statistics-content .counter {
+ 	color: #fff;
+ 	font-size: 32px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .statistics-content h3 {
+ 	color: #fff;
+ 	font-size: 20px;
+ 	text-transform: capitalize;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-top: 9px;
+ 	line-height: 1.5;
+ }
+@@ -910,9 +979,9 @@ a:focus.service-btn {
+ }
+ 
+ .project-header p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	max-width: 470px;
+ 	margin-top: 32px;
+ }
+@@ -970,7 +1039,7 @@ a:focus.service-btn {
+ 	position: absolute;
+ 	height: 100%;
+ 	width: 100%;
+-	background: rgba(115, 112, 216, .75);
++	background: rgba(26, 35, 126, .75);
+ 	display: flex;
+ 	align-items: center;
+ 	text-transform: capitalize;
+@@ -992,7 +1061,7 @@ a:focus.service-btn {
+ .isotope-overlay a {
+ 	color: #fff;
+ 	font-size: 24px;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .isotope-overlay h3 a {
+@@ -1002,7 +1071,7 @@ a:focus.service-btn {
+ .isotope-overlay p {
+ 	color: #fff;
+ 	font-size: 14px;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-top: 15px;
+ }
+ 
+@@ -1024,8 +1093,8 @@ a:focus.service-btn {
+ }
+ 
+ .project-view {
+-	background: #7370d8;
+-	border: 1px solid #7370d8;
++	background: #1A237E;
++	border: 1px solid #1A237E;
+ 	width: 185px;
+ 	height: 52px;
+ 	line-height: 50px;
+@@ -1041,7 +1110,7 @@ a:focus.service-btn {
+ }
+ 
+ .project-view:hover {
+-	color: #7370d8;
++	color: #1A237E;
+ 	background: transparent;
+ }
+ 
+@@ -1052,7 +1121,7 @@ a:focus.service-btn {
+ --------------------------------------*/
+ .team {
+ 	padding: 120px 0;
+-	background: #908ddc;
++	background: #1A237E;
+ }
+ 
+ .team.team-main {
+@@ -1136,7 +1205,7 @@ a:focus.service-btn {
+ 	left: 0;
+ 	width: 100%;
+ 	padding: 19px 0 0px 30px;
+-	background: rgba(65, 62, 126, .8);
++	background: rgba(26, 35, 126, .8);
+ 	height: 90px;
+ 	-webkit-transition: .7s;
+ 	-moz-transition: .7s;
+@@ -1150,14 +1219,14 @@ a:focus.service-btn {
+ 	display: block;
+ 	font-size: 18px;
+ 	margin-bottom: 8px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .team-box-inner .team-meta {
+ 	display: block;
+ 	color: #fff;
+ 	font-size: 12px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	-webkit-transition: .7s;
+ 	-moz-transition: .7s;
+ 	-ms-transition: .7s;
+@@ -1169,9 +1238,9 @@ a.learn-btn,
+ a:hover.learn-btn,
+ a:focus.learn-btn,
+ a:active.learn-btn {
+-	color: #7086e6;
++	color: #C5A967;
+ 	font-size: 12px;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 700;
+ 	text-transform: capitalize;
+ 	margin-top: 8px;
+@@ -1194,7 +1263,7 @@ a:active.learn-btn {
+ }
+ 
+ .single-team-box:hover {
+-	box-shadow: 5px 5px 30px 5px rgba(65, 62, 126, .2);
++	box-shadow: 5px 5px 30px 5px rgba(26, 35, 126, .2);
+ }
+ 
+ .single-team-box.single-team-card:hover {
+@@ -1233,7 +1302,7 @@ a:active.learn-btn {
+ 
+ /*pricing-header */
+ .pricing-header {
+-	background: #7370d8;
++	background: #1A237E;
+ 	padding-top: 25px;
+ 	padding-bottom: 28px;
+ 	-webkit-transition: all 0.3s linear;
+@@ -1246,14 +1315,14 @@ a:active.learn-btn {
+ .pricing-header h2 {
+ 	font-size: 24px;
+ 	color: #fff;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ }
+ 
+ .pricing-header p {
+ 	color: #fff;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 300;
+ 	text-transform: capitalize;
+ }
+@@ -1268,7 +1337,7 @@ a:active.learn-btn {
+ .plan-lists li {
+ 	font-size: 16px;
+ 	line-height: 40px;
+-	color: #888;
++	color: #4A4A4A;
+ 	text-transform: capitalize;
+ 	-webkit-transition: all 0.3s linear;
+ 	-moz-transition: all 0.3s linear;
+@@ -1294,7 +1363,7 @@ a:active.learn-btn {
+ .packeg_p span {
+ 	vertical-align: 12px;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 300;
+ 	margin-right: 5px;
+ }
+@@ -1310,7 +1379,7 @@ a:active.learn-btn {
+ }
+ 
+ .project-btn.pricing-btn a:hover {
+-	color: #7370d8;
++	color: #1A237E;
+ }
+ 
+ /*-------------------------------------
+@@ -1334,7 +1403,7 @@ a:active.learn-btn {
+ 	height: 100px;
+ 	line-height: 100px;
+ 	border-radius: 50%;
+-	border: 2px solid #7370d8;
++	border: 2px solid #C5A967;
+ }
+ 
+ .testemonial .owl-theme .owl-nav.disabled+.owl-dots {
+@@ -1352,8 +1421,8 @@ a:active.learn-btn {
+ }
+ 
+ .testemonial .owl-theme .owl-dots .owl-dot.active span {
+-	background: #7370d8;
+-	border: 2px solid #7370d8;
++	background: #1A237E;
++	border: 2px solid #1A237E;
+ }
+ 
+ /*home1-testm-txt*/
+@@ -1362,25 +1431,25 @@ a:active.learn-btn {
+ }
+ 
+ .home1-testm-txt p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 24px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	letter-spacing: -0.5px;
+ 	padding: 15px 0 30px;
+ }
+ 
+ .home1-testm-txt h3 a {
+-	color: #7370d8;
++	color: #1A237E;
+ 	font-size: 24px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 500;
+ 	text-transform: capitalize;
+ }
+ 
+ .home1-testm-txt h4 {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 18px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 500;
+ 	padding: 14px 0 0px;
+ }
+@@ -1398,7 +1467,7 @@ a:active.learn-btn {
+ 		12. Client
+ --------------------------------------*/
+ .clients {
+-	background: #7370d8;
++	background: #1A237E;
+ 	padding: 53px 0 0px;
+ }
+ 
+@@ -1430,12 +1499,12 @@ a:active.learn-btn {
+ }
+ 
+ .news-card-pb-25 {
+-	padding-bottom: 25px;
++	padding-bottom: 0;
+ }
+ 
+ /*single-news-box*/
+ .single-news-box {
+-	box-shadow: 0 5px 30px 0px rgba(115, 112, 215, .2);
++	box-shadow: 0 5px 30px 0px rgba(26, 35, 126, 0.1);
+ 	min-height: 504px;
+ 	margin-bottom: 13px;
+ 	-webkit-transition: .5s;
+@@ -1505,7 +1574,7 @@ a:active.learn-btn {
+ 	display: block;
+ 	color: #4d4e54;
+ 	font-size: 12px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .news-box-inner span {
+@@ -1517,9 +1586,9 @@ a.learn-btn,
+ a:hover.learn-btn,
+ a:focus.learn-btn,
+ a:active.learn-btn {
+-	color: #7086e6;
++	color: #C5A967;
+ 	font-size: 12px;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 700;
+ 	text-transform: capitalize;
+ 	margin-top: 8px;
+@@ -1539,7 +1608,7 @@ a:active.learn-btn {
+ 
+ /*team-box-inner*/
+ .single-news-box:hover {
+-	box-shadow: 0 5px 35px 0px rgba(115, 112, 215, .2);
++	box-shadow: 0 5px 35px 0px rgba(26, 35, 126, .2);
+ }
+ 
+ .single-news-box:hover .news-box-bg {
+@@ -1562,7 +1631,7 @@ a:active.learn-btn {
+ }
+ 
+ .contact:before {
+-	background: rgba(115, 112, 215, .85);
++	background: rgba(26, 35, 126, .85);
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+@@ -1581,7 +1650,7 @@ a:active.learn-btn {
+ .contact-form h3 {
+ 	color: #fff;
+ 	font-size: 24px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ 	margin-bottom: 40px;
+ }
+@@ -1613,7 +1682,7 @@ a:active.learn-btn {
+ 	box-shadow: none;
+ 	outline: 0 !important;
+ 	background: #f9faff;
+-	color: #888;
++	color: #4A4A4A;
+ 	resize: none;
+ 
+ }
+@@ -1627,12 +1696,12 @@ a:active.learn-btn {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+-	background: #7370d8;
++	background: #1A237E;
+ 	height: 50px;
+ 	width: 195px;
+-	border: 1px solid #7370d8;
++	border: 1px solid #1A237E;
+ 	text-transform: uppercase;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-top: 3px;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -1659,9 +1728,9 @@ a:active.learn-btn {
+ }
+ 
+ .single-contact-btn:hover button.contact-btn {
+-	color: #7370d8;
++	color: #1A237E;
+ 	background: #fff;
+-	border: 1px solid #7370d8;
++	border: 1px solid #1A237E;
+ }
+ 
+ /*--contct button--*/
+@@ -1685,7 +1754,7 @@ a:active.learn-btn {
+ .contact-office-address h3 {
+ 	color: #fff;
+ 	font-size: 24px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ }
+ 
+@@ -1693,7 +1762,7 @@ a:active.learn-btn {
+ 	color: #fff;
+ 	font-size: 14px;
+ 	margin-bottom: 14px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-top: 30px;
+ 	margin-bottom: 50px;
+ }
+@@ -1752,13 +1821,13 @@ a:active.learn-btn {
+ --------------------------------------*/
+ .new-project {
+ 	padding: 72px 0 72px;
+-	background: #7370d8;
++	background: #1A237E;
+ }
+ 
+ .single-new-project h3 {
+ 	color: #fff;
+ 	font-size: 30px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.5;
+ 
+ }
+@@ -1773,7 +1842,7 @@ a:active.learn-btn {
+ 	border: 1px solid #fff;
+ 	font-size: 13px;
+ 	text-transform: uppercase;
+-	font-family: 'Lato', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 700;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -1784,7 +1853,7 @@ a:active.learn-btn {
+ 
+ .single-new-project a.slide-btn:hover {
+ 	background: #f5f5fb;
+-	color: #5549af;
++	color: #C5A967;
+ 	border: 1px solid #f5f5fb;
+ }
+ 
+@@ -1822,7 +1891,7 @@ a:active.learn-btn {
+ .hm-foot-para p {
+ 	color: #aaa;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: lowercase;
+ 	text-transform: initial;
+ 	max-width: 1000px;
+@@ -1904,7 +1973,7 @@ a:active.learn-btn {
+ .hm-foot-para p.para-news {
+ 	color: #aaa;
+ 	font-size: 15px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: initial;
+ 	max-width: 263px;
+ 	padding-top: 3px;
+@@ -1933,7 +2002,7 @@ a:active.learn-btn {
+ .foot-email-subscribe button {
+ 	width: 65px;
+ 	height: 65px;
+-	background: #7370d8;
++	background: #1A237E;
+ 	font-size: 14px;
+ 	color: #fff;
+ 	text-transform: uppercase;
+@@ -1951,7 +2020,7 @@ a:active.learn-btn {
+ .hm-para-news a {
+ 	color: #aaa;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: lowercase;
+ 	text-transform: initial;
+ 	max-width: 258px;
+@@ -1964,7 +2033,7 @@ a:active.learn-btn {
+ }
+ 
+ .hm-para-news a:hover {
+-	color: #7370d8;
++	color: #1A237E;
+ }
+ 
+ .footer-line {
+@@ -1978,7 +2047,7 @@ a:active.learn-btn {
+ .hm-para-news span {
+ 	color: #aaa;
+ 	font-size: 12px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-top: 20px;
+ }
+ 
+@@ -2003,7 +2072,7 @@ a:active.learn-btn {
+ .foot-copyright {
+ 	color: #8b8b8b;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ /* foot-menu  */
+@@ -2018,7 +2087,7 @@ a:active.learn-btn {
+ .foot-menu li a {
+ 	color: #8790af;
+ 	background-color: transparent;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	display: inline-block;
+ 	-webkit-transition: all 0.2s linear;
+ 	-moz-transition: all 0.2s linear;
+@@ -2072,7 +2141,7 @@ a:active.learn-btn {
+ .about-part:before {
+ 	position: absolute;
+ 	content: '';
+-	background: rgba(115, 112, 216, .6);
++	background: rgba(26, 35, 126, .6);
+ 	height: 100%;
+ 	width: 100%;
+ 	top: 0;
+@@ -2131,7 +2200,7 @@ a:active.learn-btn {
+ }
+ 
+ .about-history-img img {
+-	box-shadow: 0 0 20px rgba(112, 134, 230, .2);
++	box-shadow: 0 0 20px rgba(26, 35, 126, 0.2);
+ 	height: 435px;
+ }
+ 
+@@ -2145,9 +2214,9 @@ a:active.learn-btn {
+ }
+ 
+ .about-history-txt p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.7;
+ }
+ 
+@@ -2201,7 +2270,7 @@ a:active.learn-btn {
+ 
+ .timeline-content span>i {
+ 	display: inline-block;
+-	color: #7370d8;
++	color: #1A237E;
+ 	position: relative;
+ 	top: 15px;
+ 	left: -9px;
+@@ -2221,7 +2290,7 @@ a:active.learn-btn {
+ .main-timeline .description,
+ .xtra-timeline.main-timeline .description {
+ 	font-size: 14px;
+-	color: #888;
++	color: #4A4A4A;
+ 	margin-left: 36px;
+ 	margin-top: -7px;
+ 	max-width: 390px;
+@@ -2242,7 +2311,7 @@ a:active.learn-btn {
+ .blogs-widget h2 {
+ 	color: #4d4e54;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 500;
+ 	text-transform: capitalize;
+ }
+@@ -2258,16 +2327,16 @@ a:active.learn-btn {
+ }
+ 
+ .blogs-widget input {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 20px;
+ 	padding-left: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 500;
+ 	margin-bottom: 38px;
+ }
+ 
+ .blog-search-icon a {
+-	color: #888;
++	color: #4A4A4A;
+ 	position: absolute;
+ 	top: 15px;
+ 	right: 18px;
+@@ -2284,9 +2353,9 @@ a:active.learn-btn {
+ .blog-categories-list ul li a {
+ 	display: inline-block;
+ 	padding: 12px 0 0px;
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ 	-webkit-transition: all 0.5s linear;
+ 	-moz-transition: all 0.5s linear;
+@@ -2331,7 +2400,7 @@ a:active.learn-btn {
+ .bl-txt p a {
+ 	color: #4d4e54;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ 	margin-left: 20px;
+ 	line-height: 1.4;
+@@ -2344,9 +2413,9 @@ a:active.learn-btn {
+ 
+ .bl-txt span {
+ 	display: block;
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 12px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-left: 20px;
+ 	padding-top: 8px;
+ }
+@@ -2366,7 +2435,7 @@ a:active.learn-btn {
+ .blogs-widget .btn {
+ 	color: #4d4e54;
+ 	font-size: 12px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 300;
+ 	text-transform: capitalize;
+ 	background-color: #fff;
+@@ -2417,7 +2486,7 @@ a:active.learn-btn {
+ 	padding: 11px 17px;
+ 	margin-left: 25px;
+ 	line-height: 1.42857143;
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 20px;
+ 	text-decoration: none;
+ 	background-color: #fff;
+@@ -2428,7 +2497,7 @@ a:active.learn-btn {
+ .pagination-part .pagination>li:nth-child(1)>a,
+ .pagination-part .pagination>li:nth-child(2)>a,
+ .pagination-part .pagination>li:nth-child(3)>a {
+-	border: 1px solid #888;
++	border: 1px solid #4A4A4A;
+ }
+ 
+ .pagination-part .pagination {
+@@ -2454,13 +2523,13 @@ a:active.learn-btn {
+ .bl-single-head p {
+ 	color: #a4a4a4;
+ 	font-size: 14px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	text-transform: capitalize;
+ }
+ 
+ .bl-single-head p span {
+ 	color: #4d4e54;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 
+ }
+ 
+@@ -2475,7 +2544,7 @@ a:active.learn-btn {
+ .bl-single-para h3 {
+ 	color: #636363;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	letter-spacing: -0.5px;
+ 	line-height: 1.6;
+ 	text-transform: none;
+@@ -2483,9 +2552,9 @@ a:active.learn-btn {
+ }
+ 
+ .bl-single-para p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	line-height: 1.87;
+ 	text-transform: none;
+ }
+@@ -2493,7 +2562,7 @@ a:active.learn-btn {
+ .bl-single-para blockquote {
+ 	color: #636363;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 500;
+ 	font-style: italic;
+ 	max-width: 571px;
+@@ -2551,7 +2620,7 @@ a:active.learn-btn {
+ .bl-list-icon ul li a {
+ 	color: #a4a4a4;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	padding-right: 14px;
+ 	cursor: pointer;
+ }
+@@ -2559,7 +2628,7 @@ a:active.learn-btn {
+ .bl-single-tag p {
+ 	color: #a4a4a4;
+ 	font-size: 16px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .bl-single-tag p span a {
+@@ -2577,7 +2646,7 @@ a:active.learn-btn {
+ 
+ /*.blog-single-form */
+ .contact-form.blog-single-form {
+-	padding-bottom: 25px;
++	padding-bottom: 0;
+ }
+ 
+ .contact-form.blog-single-form h3 {
+@@ -2598,7 +2667,7 @@ a:active.learn-btn {
+ .comments-area h3 {
+ 	color: #4d4e54;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	margin-bottom: 40px;
+ }
+ 
+@@ -2629,22 +2698,22 @@ a:active.learn-btn {
+ }
+ 
+ .comment-content {
+-	padding-left: 27px;
++	padding-left: 12px;
+ }
+ 
+ .comment-content>b.fn a {
+ 	color: #4d4e54;
+ 	font-size: 20px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 400;
+ 	text-transform: capitalize;
+ }
+ 
+ .comment-content>b.fn a span {
+ 	padding: 0 16px 0 26px;
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 14px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 300;
+ }
+ 
+@@ -2652,13 +2721,13 @@ a:active.learn-btn {
+ 	display: inline-block;
+ 	color: #7e7bda;
+ 	font-size: 14px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ }
+ 
+ .comment-content p {
+-	color: #888;
++	color: #4A4A4A;
+ 	font-size: 14px;
+-	font-family: 'Poppins', sans-serif;
++	font-family: 'Inter', sans-serif;
+ 	font-weight: 300;
+ 	padding-top: 15px;
+ 	line-height: 1.7;
+@@ -2690,8 +2759,8 @@ a:active.learn-btn {
+ 	cursor: pointer;
+ 	z-index: 15;
+ 	color: #fff;
+-	background: #7370d8;
+-	border: 1px solid #7370d8;
++	background: #1A237E;
++	border: 1px solid #1A237E;
+ 	border-radius: 5px;
+ 	-webkit-transition: .5s;
+ 	-moz-transition: .5s;
+@@ -2702,13 +2771,103 @@ a:active.learn-btn {
+ }
+ 
+ #scroll-Top .return-to-top:hover {
+-	background: #7370d8;
++	background: #1A237E;
+ 	color: #fff;
+-	border: 1px solid #7370d8;
++	border: 1px solid #1A237E;
+ 	border-radius: 50%;
+ }
+ 
+ /* Sticky Footer Fix */
+ .footer-copyright {
+ 	margin-top: auto;
+-}
+\ No newline at end of file
++}
++
++/*--- Program & Kurul Custom Styles ---*/
++.program-grid {
++    display: grid;
++    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
++    gap: 25px;
++    margin-top: 40px;
++}
++
++.program-item {
++    background: #fff;
++    border-radius: 12px;
++    padding: 25px;
++    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
++    border: 1px solid #f0f0f0;
++    transition: all 0.4s ease;
++    display: flex;
++    gap: 20px;
++    align-items: flex-start;
++}
++
++.program-item:hover {
++    transform: translateY(-8px);
++    box-shadow: 0 15px 40px rgba(26, 35, 126, 0.12);
++    border-color: #C5A967;
++}
++
++.program-icon img {
++    width: 50px !important;
++    height: 50px !important;
++    object-fit: contain;
++    filter: grayscale(1) brightness(0.5); /* Neutral icons */
++    transition: 0.3s;
++}
++
++.program-item:hover .program-icon img {
++    filter: none; /* Color icons on hover */
++}
++
++.program-time {
++    font-weight: 700;
++    color: #C5A967;
++    font-size: 14px;
++    margin-bottom: 8px;
++    text-transform: uppercase;
++}
++
++.program-title {
++    font-size: 18px;
++    font-weight: 700;
++    color: #1A237E;
++    margin-bottom: 12px;
++    line-height: 1.4;
++}
++
++.program-details p {
++    font-size: 14px !important;
++    line-height: 1.6;
++    color: #555;
++    margin-bottom: 5px !important;
++}
++
++.program-details strong {
++    color: #333;
++}
++
++.about-us-txt h3 {
++    color: #1A237E;
++    font-weight: 700;
++    font-size: 24px;
++    margin-bottom: 20px;
++}
++
++.nav-tabs {
++    border-bottom: 2px solid #f0f0f0;
++}
++
++.nav-tabs > li > a {
++    border: none !important;
++    color: #666 !important;
++    font-weight: 600 !important;
++    padding: 15px 30px !important;
++    transition: 0.3s;
++}
++
++.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
++    color: #1A237E !important;
++    border-bottom: 3px solid #C5A967 !important;
++    background: none !important;
++}
+diff --git a/assets/pdf/zirve_program_2026.pdf b/assets/pdf/zirve_program_2026.pdf
+index 7aa4170..d94efab 100644
+--- a/assets/pdf/zirve_program_2026.pdf
++++ b/assets/pdf/zirve_program_2026.pdf
+@@ -1,106 +1,100 @@
+-                       ESK─░┼ŞEH─░R MUHASEBE, F─░NANS VE VERG─░ Z─░RVES─░
+-                                               ESK─░┼ŞEH─░R TALKS
++   ESK─░┼ŞEH─░R TALKS 2026
+ 
+-                            Eski┼şehir, Osmangazi ├£niversitesi Kongre Merkezi
+-                                                  11-12 Nisan 2026
++ESK─░┼ŞEH─░R MUHASEBE,
++F─░NANS VE VERG─░ Z─░RVES─░
+ 
+-                                            Z─░RVE E┼Ş BA┼ŞKANLARI
+-                                    Prof. Dr. Nurullah U├çKUN ÔÇô ESOG├£
+-                           Prof. Dr. Seval SEL─░MO─ŞLU ÔÇô Anadolu ├£niversitesi
+-                             Prof. Dr. Necdet SA─ŞLAM- Anadolu ├£niversitesi
++Eski┼şehir Talks
+ 
+-1.G├╝n: 11 Nisan 2026
+-08:30-09:00 ÔÇô Kay─▒t
+-A├ğ─▒l─▒┼ş Konu┼şmalar─▒ 09:30-10:00
+-Prof. Dr. Nurullah U├çKUN, ESOG├£ - Prof. Dr. Necdet SA─ŞLAM, Anadolu ├£niversitesi
+-Prof. Dr. Cemal ─░B─░┼Ş, T├£RMOB Ba┼şkan Yard─▒mc─▒s─▒
+-Abdullah Erdem CANTEMUR, Hazine ve Maliye Bakan Yard─▒mc─▒s─▒
+-Dr. Erdin├ğ YILMAZ, Eski┼şehir Valisi
++Osmangazi ├£niversitesi Kongre Merkezi
++11ÔÇô12 Nisan 2026 | eskisehirzirve.com.tr
+ 
+-Kahve Aras─▒ 11:30-11:45
+-10:30-11:30 Davetli Konu┼şmac─▒lar
++1. G├£N       A├ğ─▒l─▒┼ş & Davetli Konu┼şmac─▒lar                                11 N─░SAN 2026, CUMARTES─░
+ 
+-Dr. Hasan ├ûZ├çEL─░K, KGK Ba┼şkan─▒
+-Prof. Dr. G├╝ler ARAS, YT├£ CFGS Kurucu Direkt├Âr, Entegre Raporlama Derne─şi T├╝rkiye
+-(ERTA)
+-Kurucu Y├Ânetim Kurulu Ba┼şkan─▒
+-Nadir K├£PEL─░, Eski┼şehir OSB Y├Ânetim Kurulu Ba┼şkan─▒
++09:30ÔÇô10:30  A├çILI┼Ş KONU┼ŞMALARI
+ 
+-13:00-14:00 ├û─ŞLE ARASI
+-14:00 ÔÇô 15:30 S├£RD├£R├£LEB─░L─░RL─░K ALANINDA SON GEL─░┼ŞMELER
+-Moderat├Âr: Prof. Dr. Seval SEL─░MO─ŞLU, Anadolu ├£niversitesi
+-Konu┼şmac─▒: G├╝l┼şah G├£NAY, KGK S├╝rd├╝r├╝lebilirlik Standartlar─▒ Daire Ba┼şkan─▒
++             Prof. Dr. Nurullah U├çKUN ÔÇö ESOG├£
++             Prof. Dr. Necdet SA─ŞLAM ÔÇö Anadolu ├£niversitesi
++             Prof. Dr. Cemal ─░B─░┼Ş ÔÇö T├£RMOB Ba┼şkan Yard─▒mc─▒s─▒
++             Dr. Erdin├ğ YILMAZ ÔÇö Eski┼şehir Valisi
++             Abdullah Erdem CANTEMUR ÔÇö Hazine ve Maliye Bakan Yard─▒mc─▒s─▒
+ 
+-  -─░├ğerik: S├╝rd├╝r├╝lebilirlik Standartlar─▒ ve Raporlama ├çer├ğeveleri
+-Konu┼şmac─▒: Sevgi KILI├ç ER, KGK S├╝rd├╝r├╝lebilirlik Standartlar─▒ Uzman─▒
++10:30ÔÇô10:45  Kahve Aras─▒
+ 
+-  -─░├ğerik: S├╝rd├╝r├╝lebilirlik Raporlar─▒n─▒n Haz─▒rlanmas─▒ ve G├╝vence Denetimi
++10:45ÔÇô12:45  DAVETLI KONU┼ŞMACILAR
+ 
+-Kahve Aras─▒ 15:30-15:45
++             Dr. Hasan ├ûZ├çEL─░K ÔÇö KGK Ba┼şkan─▒
++             Prof. Dr. G├╝ler ARAS ÔÇö YT├£ CFGS Kurucu Direkt├Âr / ERTA Y├Ânetim Kurulu Ba┼şkan─▒
++             Nadir K├£PEL─░ ÔÇö Eski┼şehir OSB Y├Ânetim Kurulu Ba┼şkan─▒
+ 
+-15:45 ÔÇô 17:00 VERG─░ VE DENET─░M ALANINDA SON GEL─░┼ŞMELER
+-Moderat├Âr: Faruk G├ûZ├£B├£Y├£K, G─░B Ba┼şkan Yard─▒mc─▒s─▒
++13:00ÔÇô14:00  ├û─şle Aras─▒
+ 
+-Konu┼şmac─▒: Mehmet Fatih ├ûZMEN, G─░B Grup Ba┼şkan Vekili
+-  -─░├ğerik: Vergi Uyumunun Sa─şlanmas─▒nda ├ûnleyici Denetim Yakla┼ş─▒m─▒: G├╝ncel Geli┼şmeler I┼ş─▒─ş─▒nda
+-  Meslek Mensuplar─▒n─▒n Rol├╝
+-  Konu┼şmac─▒: Nuri ERALIN, M├╝kellef Hizmetleri Daire Ba┼şkan─▒
+-   -─░├ğerik: Davran─▒┼şsal Kamu Politikalar─▒n─▒n Gelir ─░daresi Pratiklerine Yans─▒malar─▒: Vergi
+-Uyumunun Art─▒r─▒lmas─▒nda ─░├ğg├Âr├╝ Temelli M├╝dahaleler
++14:00ÔÇô15:30  OTURUM I
+ 
+-17:00-17:30 G├╝n├╝n De─şerlendirilmesi
+-Prof. Dr. Tun├ğ K├ûSE, ESOG├£
+-Prof. Dr. Ay┼şe Banu BA┼ŞAR, Anadolu ├£niversitesi
++             S├╝rd├╝r├╝lebilirlik Alan─▒nda Son Geli┼şmeler
+ 
+-2.G├╝n: 12 Nisan 2026
+-09:30 ÔÇô 11:00 MAL─░YE, D─░J─░TAL DENET─░M VE HUKUK─░ YAPISI
+-Moderat├Âr: Prof. Dr. Erkan ├£Y├£MEZ, Anadolu ├£niversitesi veya Cemil M├£SEV─░TO─ŞLU,
+-Eski┼şehir Defterdar─▒
+-Konu┼şmac─▒: Ulvi Cant├╝rk KAYA, T.C. Hazine ve Maliye Bakanl─▒─ş─▒ Vergi Denetim Kurulu
+-Bursa Daire Ba┼şkan─▒
++             MODERAT├ûR: Prof. Dr. Seval SEL─░MO─ŞLU ÔÇö Anadolu ├£niversitesi
++             G├╝l┼şah G├£NAY ÔÇö KGK | S├╝rd├╝r├╝lebilirlik Standartlar─▒ ve Raporlama ├çer├ğeveleri
++             Sevgi KILI├ç ER ÔÇö KGK | S├╝rd├╝r├╝lebilirlik Raporlar─▒n─▒n Haz─▒rlanmas─▒ ve G├╝vence Denetimi
+ 
+-    -─░├ğerik: KURGAN ÔÇô Para┼ş├╝t Sistemi
+-Konu┼şmac─▒: Mehmet ├ûNER, YMM
++15:30ÔÇô15:45  Kahve Aras─▒
+ 
+-  -─░├ğerik: Dijital Denetim: Uygulamalar ve Gelecek
+-Konu┼şmac─▒: Do├ğ. Dr. Serkan A─ŞAR, Ankara ├£niversitesi
++17:00ÔÇô17:30  G├£N├£N DE─ŞERLENDIRILMESI
+ 
+-  -─░├ğerik: M├╝kellef Haklar─▒ ve Hukuki Yap─▒
++             Prof. Dr. Tun├ğ K├ûSE ÔÇö ESOG├£
++             Prof. Dr. Ay┼şe Banu BA┼ŞAR ÔÇö Anadolu ├£niversitesi
+ 
+-11:00-11:15 Kahve Aras─▒
+-11:15 ÔÇô 12:45 F─░NANS P─░YASALARINDA GEL─░┼ŞMELER
++eskisehirzirve.com.tr                                                                       Sayfa 1 / 2
++   ESK─░┼ŞEH─░R TALKS 2026
+ 
+-Moderat├Âr: Prof. Dr. Burak ARZOVA, Marmara ├£niversitesi veya Prof. Dr. Metin CO┼ŞKUN,
+-Anadolu ├£niversitesi
+-Konu┼şmac─▒: ├£zeyir DO─ŞAN, A1 Capital Genel M├╝d├╝r Yard─▒mc─▒s─▒
+-Konu┼şmac─▒: Tongu├ğ ERBA┼Ş, Ahlat├ğ─▒ Yat─▒r─▒m Genel M├╝d├╝r Yard─▒mc─▒s─▒
++ESK─░┼ŞEH─░R MUHASEBE,
++F─░NANS VE VERG─░ Z─░RVES─░
+ 
+-12:45-13:45 ├û─ŞLE ARASI
+-13:45 ÔÇô 15:15 KURUMLAR VERG─░S─░ VE SON VERG─░ D├£ZENLEMELER─░
+-Moderat├Âr: Erol DEM─░REL, ─░SMMMO Ba┼şkan─▒
+-Konu┼şmac─▒: Selahattin G├ûKMEN, YMM
++Eski┼şehir Talks
+ 
+-  -─░├ğerik: Kurumlar Vergisi Uygulamalar─▒nda Kritik Noktalar ve ├ûzellikli Durumlar
+-Konu┼şmac─▒: ─░rfan VURAL, YMM
++Osmangazi ├£niversitesi Kongre Merkezi
++11ÔÇô12 Nisan 2026 | eskisehirzirve.com.tr
+ 
+-  -─░├ğerik: Son Vergi D├╝zenlemeleri ve Pratik Yakla┼ş─▒mlar
+-  -─░├ğerik: Meslek Mensuplar─▒n─▒n G├╝ncel Sorunlar─▒ ve ├ç├Âz├╝m ├ûnerileri
++2. G├£N       Maliye, Finans ve Denetim Oturumlar─▒                 12 N─░SAN 2026, PAZAR
+ 
+-15:15-15:30 Kahve Aras─▒
+-15:30 ÔÇô 16:30 DENET─░M ALANINDA SON GEL─░┼ŞMELER
+-Moderat├Âr: Ersin KARAKO├ç Eski┼şehir SMMM Oda Ba┼şkan─▒
+-Konu┼şmac─▒: Do├ğ. Dr. Hasan YAL├çIN ÔÇô HYS, Alt─▒nba┼ş ├£niversitesi
++09:30ÔÇô11:00  OTURUM III
+ 
+-  -─░├ğerik: Ba─ş─▒ms─▒z Denetimde Kalite ve Standartlar
+-Konu┼şmac─▒: ─░smail YAVUZ, Deloitte Partner
++             Maliye, Dijital Denetim ve Hukuki Yap─▒s─▒
+ 
+-  -─░├ğerik: B├╝y├╝k ├ûl├ğekli ┼Şirketlerde Denetim Uygulamalar─▒
++             MODERAT├ûR: Prof. Dr. Erkan ├£Y├£MEZ ÔÇö Anadolu ├£niversitesi
++             Ulvi Cant├╝rk KAYA ÔÇö Vergi Denetim Kurulu Bursa | KURGAN ÔÇô Para┼ş├╝t Sistemi
++             Mehmet ├ûNER ÔÇö YMM | Dijital Denetim: Uygulamalar ve Gelecek
++             Do├ğ. Dr. Serkan A─ŞAR ÔÇö Ankara ├£niversitesi | M├╝kellef Haklar─▒ ve Hukuki Yap─▒
+ 
+-16:30-17:00 G├╝n├╝n de─şerlendirilmesi
+-Prof. Dr. Ferhan Kuyucak ┼ŞENG├£R, EST├£
+-Prof. Dr. Arman Aziz KARAG├£L, Anadolu ├£niversitesi
++11:00ÔÇô11:15  Kahve Aras─▒
+ 
+-Kapan─▒┼ş Konu┼şmas─▒
+-Halil CABAR, YMM, Eski┼şehir YMM Odas─▒ Temsilcisi
+-https://eskisehirzirve.com.tr/
++11:15ÔÇô12:45  OTURUM IV
++
++             Finans Piyasalar─▒nda Geli┼şmeler
++
++             MODERAT├ûR: Prof. Dr. Metin CO┼ŞKUN ÔÇö Anadolu ├£niversitesi
++             Bar─▒┼ş ├£RK├£N ÔÇö Gedik Yat─▒r─▒m Menkul De─şerler A.┼Ş. Kurumsal Finansman M├╝d├╝r├╝
++             Tongu├ğ ERBA┼Ş ÔÇö Ahlat├ğ─▒ Holding Strateji Direkt├Âr├╝
++
++12:45ÔÇô13:45  ├û─şle Aras─▒
++
++13:45ÔÇô15:15  OTURUM V
++
++             Kurumlar Vergisi ve Son Vergi D├╝zenlemeleri
++
++             MODERAT├ûR: Erol DEM─░REL ÔÇö ─░SMMMO Ba┼şkan─▒
++             Selahattin G├ûKMEN ÔÇö YMM | Kurumlar Vergisi Uygulamalar─▒nda Kritik Noktalar
++             ─░rfan VURAL ÔÇö YMM | Son Vergi D├╝zenlemeleri ve Meslek Mensuplar─▒n─▒n G├╝ncel Sorunlar─▒
++
++15:15ÔÇô15:30  Kahve Aras─▒
++
++16:30ÔÇô17:00  G├£N├£N DE─ŞERLENDIRILMESI
++
++             Prof. Dr. Ferhan Kuyucak ┼ŞENG├£R ÔÇö EST├£
++             Prof. Dr. Arman Aziz KARAG├£L ÔÇö Anadolu ├£niversitesi
++
++17:00ÔÇô17:30  KAPANI┼Ş KONU┼ŞMASI
++
++             Halil CABAR ÔÇö YMM, Eski┼şehir YMM Odas─▒ Temsilcisi
++
++eskisehirzirve.com.tr                                                                      Sayfa 2 / 2
+ 
+diff --git a/blog_single.html b/blog_single.html
+index 9e33e94..92b5859 100644
+--- a/blog_single.html
++++ b/blog_single.html
+@@ -853,4 +853,4 @@
+ 
+     </body>
+ 	
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/fotograflar.html b/fotograflar.html
+index 2fdbf0c..43d6779 100644
+--- a/fotograflar.html
++++ b/fotograflar.html
+@@ -174,16 +174,7 @@
+         </div>
+     </section>
+     <!--menu end-->
+-    <style>
+-        .navbar-brand img {
+-            max-height: 130px;
+-            /* Logonun maksimum y├╝ksekli─şi */
+-            width: auto;
+-            height: auto;
+-            max-width: 100%;
+-            /* Responsive olmas─▒ i├ğin */
+-        }
+-    </style>
++    
+ 
+     <!-- header-slider-area start -->
+     <section class="header-slider-area">
+@@ -233,7 +224,7 @@
+             <div class="row">
+                 <div class="foot-copyright">
+                     <p>
+-                        &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++                        &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+                         <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+                     </p>
+                 </div>
+@@ -304,4 +295,4 @@
+     </script>
+ </body>
+ 
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/hakkinda.html b/hakkinda.html
+index d640701..3d91953 100644
+--- a/hakkinda.html
++++ b/hakkinda.html
+@@ -136,15 +136,7 @@
+ 
+ 		</section><!--/.header-->	
+     <!-- Header End -->
+-    <style>
+-      .navbar-brand img {
+-        max-height: 130px; /* Logonun maksimum y├╝ksekli─şi */
+-        width: auto;
+-        height: auto;
+-        /* Responsive olmas─▒ i├ğin: */
+-        max-width: 100%;
+-      }
+-    </style>
++    
+     <!-- Menu Start -->
+     <section id="menu">
+       <div class="container">
+@@ -274,7 +266,7 @@
+ 			<!-- Sol K─▒s─▒m: Etkinlik Bilgileri ve Logo -->
+ 			  <div class="foot-copyright">
+ 				<p>
+-				  &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++				  &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+ 				  <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+ 				</p>
+ 			</div>
+diff --git a/iletisim.html b/iletisim.html
+index e480cb6..9d57362 100644
+--- a/iletisim.html
++++ b/iletisim.html
+@@ -118,15 +118,7 @@
+ 			<div class="container">
+ 				<div class="menubar">
+ 					<nav class="navbar navbar-default">
+-						<style>
+-							.navbar-brand img {
+-							  max-height: 130px; /* Logonun maksimum y├╝ksekli─şi */
+-							  width: auto;
+-							  height: auto;
+-							  /* Responsive olmas─▒ i├ğin: */
+-							  max-width: 100%;
+-							}
+-						  </style>
++						
+ 						<!-- Brand and toggle get grouped for better mobile display -->
+ 						<div class="navbar-header">
+ 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+@@ -228,7 +220,7 @@
+ 				<!-- Sol K─▒s─▒m: Etkinlik Bilgileri ve Logo -->
+ 				  <div class="foot-copyright">
+ 					<p>
+-					  &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++					  &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+ 					  <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+ 					</p>
+ 				</div>
+@@ -299,4 +291,4 @@
+ 	  }
+ 	});
+   </script>
+-  
+\ No newline at end of file
++  
+diff --git a/index.html b/index.html
+index 952ca6d..d39b442 100644
+--- a/index.html
++++ b/index.html
+@@ -10,8 +10,8 @@
+ 
+ 	<!--font-family-->
+ 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
++	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
++	
+ 
+ 	<!-- TITLE OF SITE -->
+ 	<title>Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</title>
+@@ -169,16 +169,7 @@
+ 		</div>
+ 	</section>
+ 	<!--menu end-->
+-	<style>
+-		.navbar-brand img {
+-			max-height: 130px;
+-			/* Logonun maksimum y├╝ksekli─şi */
+-			width: auto;
+-			height: auto;
+-			/* Responsive olmas─▒ i├ğin: */
+-			max-width: 100%;
+-		}
+-	</style>
++	
+ 	<!-- header-slider-area start -->
+ 	<section class="header-slider-area">
+ 		<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+@@ -198,7 +189,7 @@
+ 										style="position: relative; top: 260px; background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; display: table; margin: 0 auto;">
+ 										<h2
+ 											style="font-size: 36px; margin-bottom: 15px; color: #fff; text-shadow: none;">
+-											ESK─░┼ŞEH─░R MUHASEBE, F─░NANS VE VERG─░ Z─░RVES─░ <br> ESKISEHIR TALKS</h2>
++											ESK─░┼ŞEH─░R MUHASEBE, F─░NANS VE VERG─░ Z─░RVES─░ <br> ESK─░┼ŞEH─░R TALKS</h2>
+ 										<p style="font-size: 20px; margin: 0 auto; color: #fff; text-shadow: none;">
+ 											11-12 Nisan 2026</p>
+ 									</div>
+@@ -280,4 +271,4 @@
+ 			$(".navbar-brand img").removeClass("small-logo");
+ 		}
+ 	});
+-</script>
+\ No newline at end of file
++</script>
+diff --git a/index2.html b/index2.html
+index 382eb5a..30a3c43 100644
+--- a/index2.html
++++ b/index2.html
+@@ -214,7 +214,7 @@
+     </section>
+ 
+     <footer>
+-      <p>&copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</p>
++      <p>&copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</p>
+     </footer>
+   </body>
+ </html>
+diff --git a/index3.html b/index3.html
+index 4de82a0..8f8d271 100644
+--- a/index3.html
++++ b/index3.html
+@@ -1008,7 +1008,7 @@
+       <!-- Sol K─▒s─▒m: Etkinlik Bilgileri ve Logo -->
+         <div class="foot-copyright">
+           <p>
+-            &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++            &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+             <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+           </p>
+       </div>
+diff --git a/katilim.html b/katilim.html
+index a285ffd..304d3cb 100644
+--- a/katilim.html
++++ b/katilim.html
+@@ -315,7 +315,7 @@ TR67 0001 2009 3480 0010 2611 19
+ 			<div class="row">
+ 				<div class="foot-copyright">
+ 					<p>
+-						&copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++						&copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+ 						<a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+ 					</p>
+ 				</div>
+@@ -357,4 +357,4 @@ TR67 0001 2009 3480 0010 2611 19
+ 	  }
+ 	});
+   </script>
+-  
+\ No newline at end of file
++  
+diff --git a/kurul.html b/kurul.html
+index 9e6f8e7..518f6b7 100644
+--- a/kurul.html
++++ b/kurul.html
+@@ -10,8 +10,8 @@
+ 
+   <!--font-family-->
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
++  
+ 
+   <!-- TITLE OF SITE -->
+   <title>Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</title>
+@@ -107,16 +107,7 @@
+ 
+   </section><!--/.header-->
+   <!-- Header End -->
+-  <style>
+-    .navbar-brand img {
+-      max-height: 130px;
+-      /* Logonun maksimum y├╝ksekli─şi */
+-      width: auto;
+-      height: auto;
+-      /* Responsive olmas─▒ i├ğin: */
+-      max-width: 100%;
+-    }
+-  </style>
++  
+   <!-- Menu Start -->
+   <section id="menu">
+     <div class="container">
+@@ -261,7 +252,7 @@
+         <!-- Sol K─▒s─▒m: Etkinlik Bilgileri ve Logo -->
+         <div class="foot-copyright">
+           <p>
+-            &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++            &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+             <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+           </p>
+         </div>
+@@ -307,4 +298,4 @@
+       $(".navbar-brand img").removeClass("small-logo");
+     }
+   });
+-</script>
+\ No newline at end of file
++</script>
+diff --git a/program.html b/program.html
+index 6bf4600..3226fa4 100644
+--- a/program.html
++++ b/program.html
+@@ -13,9 +13,9 @@
+ 	<!--font-family-->
+ 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+ 
+-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
++	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
++	
+ 
+ 	<!-- TITLE OF SITE -->
+ 	<title>Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</title>
+@@ -114,16 +114,7 @@
+ 
+ 	</section><!--/.header-->
+ 	<!--header end-->
+-	<style>
+-		.navbar-brand img {
+-			max-height: 130px;
+-			/* Logonun maksimum y├╝ksekli─şi */
+-			width: auto;
+-			height: auto;
+-			/* Responsive olmas─▒ i├ğin: */
+-			max-width: 100%;
+-		}
+-	</style>
++	
+ 	<!--menu start-->
+ 	<section id="menu">
+ 		<div class="container">
+@@ -171,7 +162,8 @@
+ 	<section id="program" class="program-section">
+ 		<div class="container">
+ 			<div class="program-header text-center">
+-				<h2>Program</h2>
++				<h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 42px; color: #1A237E;">PROGRAM <br> <span style="font-size: 28px; color: #C5A967;">ESK─░┼ŞEH─░R TALKS</span></h2>
++				<p style="font-size: 18px; margin-top: 10px; color: #666;">Eski┼şehir, Osmangazi ├£niversitesi Kongre Merkezi</p>
+ 			</div>
+ 
+ 			<!-- Tab Navigasyon -->
+@@ -209,40 +201,40 @@
+ 								<img src="assets/images/service/service1.png" alt="A├ğ─▒l─▒┼ş Konu┼şmalar─▒">
+ 							</div>
+ 							<div class="program-info">
+-								<div class="program-time">09:30-10:00</div>
++								<div class="program-time">09:30-10:30</div>
+ 								<div class="program-title">A├ğ─▒l─▒┼ş Konu┼şmalar─▒</div>
+ 								<div class="program-details">
+ 									<p>┬À <strong>Prof. Dr. Nurullah U├çKUN</strong>, ESOG├£</p>
+ 									<p>┬À <strong>Prof. Dr. Necdet SA─ŞLAM</strong>, Anadolu ├£niversitesi</p>
+ 									<p>┬À <strong>Prof. Dr. Cemal ─░B─░┼Ş</strong>, T├£RMOB Ba┼şkan Yard─▒mc─▒s─▒</p>
+-									<p>┬À <strong>Abdullah Erdem CANTEMUR</strong>, Hazine ve Maliye Bakan Yard─▒mc─▒s─▒</p>
+ 									<p>┬À <strong>Dr. Erdin├ğ YILMAZ</strong>, Eski┼şehir Valisi</p>
++									<p>┬À <strong>Abdullah Erdem CANTEMUR</strong>, Hazine ve Maliye Bakan Yard─▒mc─▒s─▒</p>
+ 								</div>
+ 							</div>
+ 						</div>
+ 
+ 						<div class="program-item">
+ 							<div class="program-icon">
+-								<img src="assets/images/service/service1.png" alt="Davetli Konu┼şmac─▒lar">
++								<img src="assets/images/service/service1.png" alt="Ara">
+ 							</div>
+ 							<div class="program-info">
+-								<div class="program-time">10:30-11:30</div>
+-								<div class="program-title">Davetli Konu┼şmac─▒lar</div>
+-								<div class="program-details">
+-									<p>┬À <strong>Dr. Hasan ├ûZ├çEL─░K</strong>, KGK Ba┼şkan─▒</p>
+-									<p>┬À <strong>Prof. Dr. G├╝ler ARAS</strong>, YT├£ CFGS Kurucu Direkt├Âr, Entegre Raporlama Derne─şi T├╝rkiye (ERTA) Kurucu Y├Ânetim Kurulu Ba┼şkan─▒</p>
+-									<p>┬À <strong>Nadir K├£PEL─░</strong>, Eski┼şehir OSB Y├Ânetim Kurulu Ba┼şkan─▒</p>
+-								</div>
++								<div class="program-time">10:30-11:00</div>
++								<div class="program-title">Kahve Aras─▒</div>
+ 							</div>
+ 						</div>
+ 
+ 						<div class="program-item">
+ 							<div class="program-icon">
+-								<img src="assets/images/service/service1.png" alt="Ara">
++								<img src="assets/images/service/service1.png" alt="Davetli Konu┼şmac─▒lar">
+ 							</div>
+ 							<div class="program-info">
+-								<div class="program-time">11:30-11:45</div>
+-								<div class="program-title">Kahve Aras─▒</div>
++								<div class="program-time">11:00-13:00</div>
++								<div class="program-title">Davetli Konu┼şmac─▒lar</div>
++								<div class="program-details">
++									<p>┬À <strong>Dr. Hasan ├ûZ├çEL─░K</strong>, KGK Ba┼şkan─▒</p>
++									<p>┬À <strong>Prof. Dr. G├╝ler ARAS</strong>, YT├£ CFGS Kurucu Direkt├Âr, Entegre Raporlama Derne─şi T├╝rkiye (ERTA) Kurucu Y├Ânetim Kurulu Ba┼şkan─▒</p>
++									<p>┬À <strong>Nadir K├£PEL─░</strong>, Eski┼şehir OSB Y├Ânetim Kurulu Ba┼şkan─▒</p>
++								</div>
+ 							</div>
+ 						</div>
+ 
+@@ -329,7 +321,7 @@
+ 								<div class="program-time">09:30-11:00</div>
+ 								<div class="program-title">Maliye, Dijital Denetim ve Hukuki Yap─▒s─▒</div>
+ 								<div class="program-details">
+-									<p>Moderat├Âr: <strong>Prof. Dr. Erkan ├£Y├£MEZ</strong>, Anadolu ├£niversitesi veya <strong>Cemil M├£SEV─░TO─ŞLU</strong>, Eski┼şehir Defterdar─▒</p>
++									<p>Moderat├Âr: <strong>Prof. Dr. Erkan ├£Y├£MEZ</strong>, Anadolu ├£niversitesi</p>
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>Ulvi Cant├╝rk KAYA</strong>, T.C. Hazine ve Maliye Bakanl─▒─ş─▒ Vergi Denetim Kurulu Bursa Daire Ba┼şkan─▒</p>
+ 									<p>­şôî ─░├ğerik: KURGAN ÔÇô Para┼ş├╝t Sistemi</p>
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>Mehmet ├ûNER</strong>, YMM</p>
+@@ -358,7 +350,7 @@
+ 								<div class="program-time">11:15-12:45</div>
+ 								<div class="program-title">Finans Piyasalar─▒nda Geli┼şmeler</div>
+ 								<div class="program-details">
+-									<p>Moderat├Âr: <strong>Prof. Dr. Burak ARZOVA</strong>, Marmara ├£niversitesi veya <strong>Prof. Dr. Metin CO┼ŞKUN</strong>, Anadolu ├£niversitesi</p>
++									<p>Moderat├Âr: <strong>Prof. Dr. Metin CO┼ŞKUN</strong>, Anadolu ├£niversitesi</p>
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>├£zeyir DO─ŞAN</strong>, A1 Capital Genel M├╝d├╝r Yard─▒mc─▒s─▒</p>
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>Tongu├ğ ERBA┼Ş</strong>, Ahlat├ğ─▒ Yat─▒r─▒m Genel M├╝d├╝r Yard─▒mc─▒s─▒</p>
+ 								</div>
+@@ -387,7 +379,8 @@
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>Selahattin G├ûKMEN</strong>, YMM</p>
+ 									<p>­şôî ─░├ğerik: Kurumlar Vergisi Uygulamalar─▒nda Kritik Noktalar ve ├ûzellikli Durumlar</p>
+ 									<p>­şÄñ Konu┼şmac─▒: <strong>─░rfan VURAL</strong>, YMM</p>
+-									<p>­şôî ─░├ğerik: Son Vergi D├╝zenlemeleri ve Pratik Yakla┼ş─▒mlar, Meslek Mensuplar─▒n─▒n G├╝ncel Sorunlar─▒ ve ├ç├Âz├╝m ├ûnerileri</p>
++									<p>­şôî ─░├ğerik: Son Vergi D├╝zenlemeleri ve Pratik Yakla┼ş─▒mlar</p>
++									<p>­şôî ─░├ğerik: Meslek Mensuplar─▒n─▒n G├╝ncel Sorunlar─▒ ve ├ç├Âz├╝m ├ûnerileri</p>
+ 								</div>
+ 							</div>
+ 						</div>
+@@ -889,7 +882,7 @@
+ 				<!-- Sol K─▒s─▒m: Etkinlik Bilgileri ve Logo -->
+ 				<div class="foot-copyright">
+ 					<p>
+-						&copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++						&copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+ 						<a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+ 					</p>
+ 				</div>
+@@ -962,4 +955,4 @@
+ 			$(".navbar-brand img").removeClass("small-logo");
+ 		}
+ 	});
+-</script>
+\ No newline at end of file
++</script>
+diff --git a/sponsorlar.html b/sponsorlar.html
+index 7ba7c18..06c16b2 100644
+--- a/sponsorlar.html
++++ b/sponsorlar.html
+@@ -10,8 +10,8 @@
+ 
+   <!--font-family-->
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
++  
+ 
+   <!-- TITLE OF SITE -->
+   <title>Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi</title>
+@@ -187,14 +187,7 @@
+     </div>
+   </section>
+   
+-  <style>
+-    .navbar-brand img {
+-      max-height: 130px;
+-      width: auto;
+-      height: auto;
+-      max-width: 100%;
+-    }
+-  </style>
++  
+   
+   <!-- Menu -->
+   <section id="menu">
+@@ -333,7 +326,7 @@
+       <div class="row">
+         <div class="foot-copyright">
+           <p>
+-            &copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++            &copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+             <a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+           </p>
+         </div>
+diff --git a/sunumlar.html b/sunumlar.html
+index d010eed..0d7af41 100644
+--- a/sunumlar.html
++++ b/sunumlar.html
+@@ -202,16 +202,7 @@
+ 
+ 	</section><!--/.header-->
+ 	<!--header end-->
+-	<style>
+-		.navbar-brand img {
+-			max-height: 130px;
+-			/* Logonun maksimum y├╝ksekli─şi */
+-			width: auto;
+-			height: auto;
+-			/* Responsive olmas─▒ i├ğin: */
+-			max-width: 100%;
+-		}
+-	</style>
++	
+ 	<!--menu start-->
+ 	<section id="menu">
+ 		<div class="container">
+@@ -246,15 +237,7 @@
+ 		</div>
+ 	</section>
+ 	<!--menu end-->
+-	<style>
+-		.navbar-brand img {
+-			max-height: 80px;
+-			/* Logonun maksimum y├╝ksekli─şi */
+-			width: auto;
+-			height: auto;
+-			max-width: 100%;
+-		}
+-	</style>
++	
+ 
+ 	<!-- PDF Dok├╝manlar─▒ Section Start -->
+ 	<section id="pdfs" class="pdf-section">
+@@ -365,16 +348,7 @@
+ 	<!-- PDF Dok├╝manlar─▒ Section End -->
+ 	<!-- PDF Dok├╝manlar─▒ Section End -->
+ 	<!--menu end-->
+-	<style>
+-		.navbar-brand img {
+-			max-height: 130px;
+-			/* Logonun maksimum y├╝ksekli─şi */
+-			width: auto;
+-			height: auto;
+-			/* Responsive olmas─▒ i├ğin: */
+-			max-width: 100%;
+-		}
+-	</style>
++	
+ 
+ 	<!-- Ek CSS -->
+ 
+@@ -385,7 +359,7 @@
+ 			<div class="row">
+ 				<div class="foot-copyright">
+ 					<p>
+-						&copy; 2025 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
++						&copy; 2026 Eski┼şehir Muhasebe, Finans ve Vergi Zirvesi. T├╝m haklar─▒ sakl─▒d─▒r.
+ 						<a href="https://eskisehirzirve.com.tr/">eskisehirzirve.com.tr</a>
+ 					</p>
+ 				</div>
+@@ -453,4 +427,4 @@
+ 			});
+ 		}
+ 	});
+-</script>
+\ No newline at end of file
++</script>
+diff --git a/team.html b/team.html
+index aad04f8..597d3e6 100644
+--- a/team.html
++++ b/team.html
+@@ -571,4 +571,4 @@
+ 
+     </body>
+ 	
+-</html>
+\ No newline at end of file
++</html>
