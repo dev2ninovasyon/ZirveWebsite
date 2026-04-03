@@ -12,6 +12,19 @@ font-family: 'Inter', sans-serif;
 
 ==================================== */
 
+/* Logo Kırpma: Son iki logoyu (9'dan 7'ye) gizlemek için */
+.logo1 {
+	overflow: hidden;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.logo1 img {
+	object-fit: cover;
+	object-position: left;
+	width: 78% !important;
+	/* 7/9 logo */
+}
 
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
@@ -117,6 +130,9 @@ html,
 body {
 	height: 100%;
 	margin: 0;
+	overflow-x: hidden;
+	/* Yatay kaydırmayı engeller */
+	width: 100%;
 }
 
 body {
@@ -125,12 +141,66 @@ body {
 	min-height: 100vh !important;
 	background: #fff;
 	max-width: 100%;
-	margin: 0;
-	overflow-x: hidden;
 	font-family: 'Inter', sans-serif;
 	line-height: 1.6;
 	color: #333;
 	position: relative;
+}
+
+/* Ana Sayfa Özel: Tek Ekran (No-Scroll) Görünümü */
+body.home-page {
+	height: 100vh !important;
+	overflow: hidden !important;
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+body.home-page .header {
+	flex: 0 0 auto !important;
+	background: #fff !important;
+	position: relative !important;
+	z-index: 100 !important;
+}
+
+body.home-page #menu {
+	flex: 0 0 auto !important;
+	height: auto !important;
+	position: relative !important;
+	z-index: 100 !important;
+}
+
+body.home-page .header-slider-area {
+	flex: 0 0 auto !important;
+	height: calc(70vw * 907 / 1600) !important; /* Görsel yüksekliği: 70% genişlik × oran */
+	background: #101D42 !important;
+	overflow: hidden !important;
+}
+
+body.home-page #carousel-example-generic,
+body.home-page .carousel-inner,
+body.home-page .carousel-inner .item,
+body.home-page .carousel-inner .item.active {
+	height: 100% !important;
+	width: 100% !important;
+	display: block !important;
+}
+
+body.home-page .single-slide-item {
+	height: 100% !important;
+	width: 100% !important;
+	background-size: 70% !important;
+	background-position: center top !important;
+	background-repeat: no-repeat !important;
+	background-color: #101D42 !important;
+}
+
+body.home-page .footer-copyright {
+	flex: 0 0 auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 12px 0 !important;
+	background: #101D42 !important;
+	z-index: 10 !important;
 }
 
 .footer-copyright {
@@ -438,10 +508,13 @@ body {
 /* .single-slide-item */
 .single-slide-item {
 	position: relative;
-	background: url(../../assets/images/slider/slider-2026.jpg)no-repeat;
+	background: #1d3163 url(../../assets/images/banner/banner_whatsapp.jpg) no-repeat;
 	background-position: center;
-	background-size: cover;
-	height: 650px;
+	background-size: contain;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1600 / 907;
+	/* Görselin orijinal boyut oranı */
 }
 
 .single-slide-item:before {
@@ -507,13 +580,13 @@ body {
 }
 
 .single-slide-item.slide-1 {
-	background-image: url(../../assets/images/banner/banner.jpg);
+	background-image: url(../../assets/images/banner/banner_whatsapp.jpg);
 	position: relative;
 	z-index: 1;
 }
 
 .single-slide-item.slide-2 {
-	background-image: url(../../assets/images/banner/banner.jpg);
+	background-image: url(../../assets/images/banner/banner_whatsapp.jpg);
 	position: relative;
 	z-index: 1;
 }
@@ -937,7 +1010,9 @@ a:focus.service-btn {
 	padding: 117px 0 109px;
 }
 
-.project-details {}
+.project-details {
+	margin-top: 20px;
+}
 
 .project-content {
 	margin-top: 62px;
@@ -2057,9 +2132,7 @@ a:active.learn-btn {
 	transition: all 0.2s linear;
 }
 
-.foot-menu li a,
-.foot-menu li a:hover,
-.foot-menu li a:focus {}
+
 
 .foot-menu li {
 	position: relative;

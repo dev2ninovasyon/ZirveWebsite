@@ -67,10 +67,13 @@
 			}
 
 			.header-slider-area .single-slide-item {
-				background-size: cover;
+				background-size: contain;
 				background-position: center;
-				min-height: 200px;
-				/* Daha küçük slider yüksekliği */
+				background-repeat: no-repeat;
+				background-color: #1d3163;
+				width: 100%;
+				height: auto;
+				aspect-ratio: 1600 / 907;
 			}
 
 			.header-slider-area img {
@@ -86,7 +89,7 @@
 	</style>
 </head>
 
-<body>
+<body class="home-page">
 	<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -172,11 +175,10 @@
 	
 	<!-- header-slider-area start -->
 	<section class="header-slider-area">
-		<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
+		<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+			<!-- Indicators - Tek slayt olduğu için gizlenebilir -->
+			<ol class="carousel-indicators" style="display: none;">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 			</ol>
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
@@ -186,7 +188,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="single-slide-item-content"
-										style="position: relative; top: 260px; background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; display: table; margin: 0 auto;">
+										style="position: relative; top: 260px; background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; display: none; margin: 0 auto;">
 										<h2
 											style="font-size: 36px; margin-bottom: 15px; color: #fff; text-shadow: none;">
 											ESKİŞEHİR MUHASEBE, FİNANS VE VERGİ ZİRVESİ <br> ESKİŞEHİR TALKS</h2>
@@ -199,13 +201,7 @@
 					</div><!-- /.single-slide-item-->
 				</div><!-- /.item .active-->
 			</div><!-- /.carousel-inner-->
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-				<span class="lnr lnr-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-				<span class="lnr lnr-chevron-right"></span>
-			</a>
+			<!-- Controls - Tek slayt olduğu için oklar kaldırıldı -->
 		</div><!-- /.carousel-->
 	</section><!-- /.header-slider-area-->
 	<!-- header-slider-area end -->
